@@ -1,0 +1,72 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+html,
+body,
+div {
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 1.15rem;
+}
+
+@include media-breakpoint-up(lg) {
+    .video-container {
+        border-radius: 1.25rem;
+    }
+}
+
+.video-container {
+    #inputVideo {
+        object-fit: cover;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .top-bar {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        max-height: 4rem;
+        background-color: #abc0ff;
+        opacity: 0.95;
+
+        .material-icons,
+        .material-icons-outlined {
+            color: #ffffff;
+            font-weight: 100;
+        }
+
+        .heading {
+            font-weight: 400;
+            color: #ffffff;
+        }
+    }
+
+    .emotion-indicator {
+        position: absolute;
+        z-index: 2;
+        top: 4rem;
+        max-height: 2rem;
+
+        .emotion {
+            color: #ffffff;
+            font-weight: 700;
+            padding: 0.5rem 3rem 0.5rem 3rem;
+            background-color: rgba($color: #3d3d3d, $alpha: 0.85);
+            border: 0px solid black;
+            box-shadow: 2px 3px 10px rgba(120, 120, 121, 0.5);
+            border-radius: 0.75rem;
+        }
+    }
+}
