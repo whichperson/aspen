@@ -10,11 +10,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <h1>Oops! This is a work in progress.</h1>
           <h2>Go to <a href="/nofeedback">demo version 1 (no feedback)</a></h2>
         </Route>
-        <Route path="/:nofeedback">
+        <Route path="/nofeedback">
           <DetectionDemoV1 />
         </Route>
       </Switch>
