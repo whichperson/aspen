@@ -1,0 +1,15 @@
+[{
+    "happy": ["The conversation is going really well! Keep it up.",
+    "Your partner seems to be enjoying the conversation.",
+"Your partner is in a good mood. Talk about cheerful topics."],
+    "neutral": ["To increase their engagement, try giving more details.",
+    "Maintain eye-contact to show interest."],
+    "fearful": ["Is your stance threatening? Reassure your partner there are no dangers.",
+    "Suggest talking about what scares them."],
+    "sad": ["Try cheering your partner up. Suggest doing something they enjoy."],
+    "angry": ["Your partner is upset. Try changing the subject.",
+        "Be careful not to say anything offensive."],
+    "disgusted": ["This topic is uncomfortable for your partner."],
+    "surprised": ["Talk about something exciting that happened to you recently.",
+    "What you said must have been out of the ordinary."]
+}]
