@@ -8,10 +8,20 @@ class DetectionDemoV2 extends React.Component {
     state = {
         modelLoaded: false,
         emotion: '',
+        liveFeedback: '',
+        recentFeedback: '',
     }
 
     componentDidMount() {
         this.run();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.liveFeedback !== this.state.liveFeedback) {
+            this.setState({
+                recentFeedback: prevState.liveFeedback
+            })
+        }
     }
 
 
@@ -54,28 +64,29 @@ class DetectionDemoV2 extends React.Component {
             .withFaceLandmarks().withFaceExpressions()
 
         if (detection !== undefined) {
-            this.setState({
-                emotion: detection.expressions.asSortedArray()[0].expression
-            })
+            const emotion = detection.expressions.asSortedArray()[0].expression
+            const feedback = feedbackFile["default"][0][emotion]
+            const liveFeedback = feedback[Math.floor(Math.random() * feedback.length)]
+
+
+            if (this.state.emotion !== emotion) {
+                this.setState({
+                    emotion: emotion,
+                    liveFeedback: liveFeedback
+                })
+            }
         }
 
         if (video.paused || video.ended || !this.state.modelLoaded) {
             return false
         }
 
-        setTimeout(() => this.onPlay(video), 10)
-    }
 
-    getFeedback = (emotion) => {
-        const feedback = feedbackFile["default"][0][emotion]
-        const liveFeedback = !!feedback ? feedback[Math.floor(Math.random() * feedback.length)] : ''
-        return liveFeedback;
+        setTimeout(() => this.onPlay(video), 10)
     }
 
 
     render() {
-
-        const liveFeedback = this.getFeedback(this.state.emotion)
 
         return <>
             <div className="container-fluid">
@@ -93,12 +104,12 @@ class DetectionDemoV2 extends React.Component {
                                 {this.state.emotion !== '' ? <h4 className="emotion text-capitalize">{this.state.emotion}</h4> : ''}
                             </div>
                             <div className="live-feedback justify-content-center row w-100 mt-5 mx-auto">
-                                {liveFeedback !== '' ? <h4 className="live-feedback-text w-75 p-3">{liveFeedback}</h4> : ''}
+                                {this.state.liveFeedback !== '' ? <h4 className="live-feedback-text w-75 p-3">{this.state.liveFeedback}</h4> : ''}
                             </div>
                             <div className="row bottom-bar w-100 px-3 py-2 mx-auto align-items-center">
                                 <div className="d-flex flex-column">
                                     <h5 className="text-capitalize subheading">Latest Feedback</h5>
-                                    <span>The conversation is going well.</span>
+                                    {this.state.recentFeedback !== '' ? <span>{this.state.recentFeedback}</span> : ''}
                                 </div>
                             </div>
                             <video className="embed-responsive-item" id="inputVideo" onPlay={() => this.onPlay} muted />
