@@ -25,7 +25,11 @@ class DetectionDemoV1 extends React.Component {
 
         const constraints = {
             audio: false,
-            video: true
+            video: {
+                facingMode: {
+                    exact: 'environment'
+                }
+            }
         }
 
         const videoEl = document.getElementById("inputVideo");
