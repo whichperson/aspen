@@ -30,7 +30,6 @@ class Home extends React.Component {
                             </div>
                             <button type="submit" className="btn btn-primary d-flex ml-auto">Continue
                             <span className="ml-2 material-icons">arrow_right_alt</span>
-
                             </button>
                         </form>
                     </div>
