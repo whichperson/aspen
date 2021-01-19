@@ -37,6 +37,8 @@ class DetectionDemoV2 extends React.Component {
 
         const constraints = {
             audio: false,
+
+            //TODO: switch back the camera when we're done with the experiment
             video: {
                 facingMode: {
                     exact: 'environment'
@@ -90,7 +92,7 @@ class DetectionDemoV2 extends React.Component {
 
         return <>
             <div className="container-fluid">
-                <div className="row justify-content-center h-100 align-items center">
+                <div className="row justify-content-center h-100 align-items-center">
                     <div className="col-lg-4 col-sm-12 p-0">
                         <div className="embed-responsive video-container">
                             <div className="row top-bar w-100 px-3 py-2 mx-auto justify-content-between align-items-center">

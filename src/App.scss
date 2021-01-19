@@ -10,7 +10,8 @@
 
 html,
 body,
-div {
+#root,
+.container-fluid {
     font-family: "Lato", sans-serif;
     height: 100%;
     line-height: 24px;
@@ -25,8 +26,38 @@ h5 {
 }
 
 @include media-breakpoint-up(lg) {
+    #main,
     .video-container {
         border-radius: 1.25rem;
+    }
+}
+
+// home screen
+#home-screen {
+    #main {
+        .title {
+            color: #96b0ff;
+        }
+        color: #212121;
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 200;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+        }
+
+        input:focus {
+            outline: none !important;
+            box-shadow: none;
+            border: 1px solid #96b0ff;
+        }
+        .btn {
+            background-color: #96b0ff;
+            border: 0px solid black;
+        }
     }
 }
 
