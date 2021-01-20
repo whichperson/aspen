@@ -21,6 +21,7 @@ class Overview extends React.Component {
                     backgroundColor: '#96b0ff',
                     data: [6, 5, 7, 4, 6, 3, 8, 0],
                     borderWidth: 0,
+                    barPercentage: 0.4,
                 }],
 
             },
@@ -31,7 +32,6 @@ class Overview extends React.Component {
                 },
                 scales: {
                     xAxes: [{
-                        barPercentage: 0.4,
                         gridLines: {
                             display: false
                         },
@@ -59,7 +59,7 @@ class Overview extends React.Component {
         return <>
             <div className="container-fluid" id="overview">
                 <div className="row h-100 p-1 justify-content-center d-flex">
-                    <div className="flex-column p-4 col-lg-4 col-sm-12">
+                    <div className="flex-column p-4 col-lg-2 col-sm-12">
                         <div className="row mb-4">
                             <div className="col-12">
                                 <h3 className="font-weight-bold text-capitalize">Hi, {this.state.name}!</h3>
@@ -75,7 +75,7 @@ class Overview extends React.Component {
                                 <div className="text-capitalize btn btn-secondary p-2">View Feedback</div>
                             </div>
                         </div>
-                        <div className="row py-3 justify-content-center align-items-center" id="graph">
+                        <div className="row mb-4 py-3 justify-content-center align-items-center" id="graph">
                             <div className="col-12 mb-4">
                                 <h5 className="text-capitalize">Conversation Duration</h5>
                                 <p><span className="font-weight-bold">8</span> conversations last week</p>
@@ -84,9 +84,26 @@ class Overview extends React.Component {
                                 <canvas id="chart"></canvas>
                             </div>
                         </div>
-
+                        <div className="row start p-0 w-100">
+                            <div className="col-12 mx-auto p-0 justify-content-center align-items-center d-flex">
+                                <a href="/calibrate">
+                                    <span className="material-icons">
+                                        add
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="navbar p-0 navbar-expand-sm fixed-bottom">
+                            <div className="col-sm-12 mx-auto navigation col-lg-2 px-4 py-3 d-flex align-items-center justify-content-between">
+                                <span className="material-icons-outlined">
+                                    home
+                            </span>
+                                <span className="material-icons-outlined">
+                                    settings
+                            </span>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
 

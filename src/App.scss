@@ -94,6 +94,25 @@ h5 {
             color: #8e8e8e;
         }
     }
+
+    .start {
+        position: fixed;
+        bottom: 5%;
+        z-index: 1060;
+        span {
+            color: #ffffff;
+            font-size: 1.5rem;
+            padding: 0.75rem;
+            border: 0.75rem solid #ffffff;
+            background-color: #96b0ff;
+            border-radius: 10rem;
+        }
+    }
+
+    .navigation {
+        color: #96b0ff;
+        background-color: #f3f3f3;
+    }
 }
 
 .video-container {

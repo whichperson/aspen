@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from "./components/Home";
 import Overview from "./components/Overview";
+import Calibration from "./components/Calibration";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/overview" component={Overview} />
+        <Route path="/calibrate" component={Calibration} />
       </Switch>
     </Router>
   )
