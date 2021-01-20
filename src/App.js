@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/overview" component={Overview} />
-        <Route path="/calibrate" component={Calibration} />
+        <Route path="/calibration" component={Calibration} />
       </Switch>
     </Router>
   )

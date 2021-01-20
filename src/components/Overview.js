@@ -84,16 +84,12 @@ class Overview extends React.Component {
                                 <canvas id="chart"></canvas>
                             </div>
                         </div>
-                        <div className="row start p-0 w-100">
-                            <div className="col-12 mx-auto p-0 justify-content-center align-items-center d-flex">
-                                <a href="/calibrate">
-                                    <span className="material-icons">
-                                        add
-                                </span>
-                                </a>
+
+
+                        <div className="navbar p-0 fixed-bottom">
+                            <div className="col-sm-12 mx-auto start justify-content-center align-items-center d-flex">
+                                <a href="/calibration"><span className="material-icons">add</span></a>
                             </div>
-                        </div>
-                        <div className="navbar p-0 navbar-expand-sm fixed-bottom">
                             <div className="col-sm-12 mx-auto navigation col-lg-2 px-4 py-3 d-flex align-items-center justify-content-between">
                                 <span className="material-icons-outlined">
                                     home
@@ -102,6 +98,7 @@ class Overview extends React.Component {
                                     settings
                             </span>
                             </div>
+
                         </div>
                     </div>
                 </div>

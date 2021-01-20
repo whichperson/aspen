@@ -96,19 +96,19 @@ h5 {
     }
 
     .start {
-        position: fixed;
-        bottom: 5%;
-        z-index: 1060;
+        a {
+            z-index: 1060;
+        }
         span {
             color: #ffffff;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             padding: 0.75rem;
-            border: 0.75rem solid #ffffff;
-            background-color: #96b0ff;
             border-radius: 10rem;
+            background-color: #96b0ff;
+            border: 0.75rem solid #ffffff;
+            margin-bottom: -1rem;
         }
     }
-
     .navigation {
         color: #96b0ff;
         background-color: #f3f3f3;
