@@ -75,7 +75,7 @@ class Overview extends React.Component {
                                 <div className="text-capitalize btn btn-secondary p-2">View Feedback</div>
                             </div>
                         </div>
-                        <div className="row mb-4 py-3 justify-content-center align-items-center" id="graph">
+                        <div className="row py-3 justify-content-center align-items-center" id="graph">
                             <div className="col-12 mb-4">
                                 <h5 className="text-capitalize">Conversation Duration</h5>
                                 <p><span className="font-weight-bold">8</span> conversations last week</p>
@@ -84,7 +84,6 @@ class Overview extends React.Component {
                                 <canvas id="chart"></canvas>
                             </div>
                         </div>
-
 
                         <div className="navbar p-0 fixed-bottom">
                             <div className="col-sm-12 mx-auto start justify-content-center align-items-center d-flex">
