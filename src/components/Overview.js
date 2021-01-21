@@ -86,10 +86,10 @@ class Overview extends React.Component {
                         </div>
 
                         <div className="navbar p-0 fixed-bottom">
-                            <div className="col-sm-12 mx-auto start justify-content-center align-items-center d-flex">
+                            <div className="col-sm-12 col-lg-4 mx-auto start justify-content-center align-items-center d-flex">
                                 <a href="/detection"><span className="material-icons">add</span></a>
                             </div>
-                            <div className="col-sm-12 mx-auto navigation col-lg-2 px-4 py-3 d-flex align-items-center justify-content-between">
+                            <div className="col-sm-12 mx-auto navigation col-lg-4 px-4 py-3 d-flex align-items-center justify-content-between">
                                 <span className="material-icons-outlined">
                                     home
                             </span>
