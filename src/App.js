@@ -6,7 +6,8 @@ import {
 } from 'react-router-dom';
 import Home from "./components/Home";
 import Overview from "./components/Overview";
-import Calibration from "./components/Calibration";
+import Detection from "./components/Detection";
+import Summary from "./components/Summary";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/overview" component={Overview} />
-        <Route path="/calibration" component={Calibration} />
+        <Route path="/detection" component={Detection} />
+        <Route path="/summary" component={Summary} />
       </Switch>
     </Router>
   )

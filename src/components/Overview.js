@@ -59,7 +59,7 @@ class Overview extends React.Component {
         return <>
             <div className="container-fluid" id="overview">
                 <div className="row h-100 p-1 justify-content-center d-flex">
-                    <div className="flex-column p-4 col-lg-2 col-sm-12">
+                    <div className="flex-column p-4 col-lg-4 col-sm-12">
                         <div className="row mb-4">
                             <div className="col-12">
                                 <h3 className="font-weight-bold text-capitalize">Hi, {this.state.name}!</h3>
@@ -87,7 +87,7 @@ class Overview extends React.Component {
 
                         <div className="navbar p-0 fixed-bottom">
                             <div className="col-sm-12 mx-auto start justify-content-center align-items-center d-flex">
-                                <a href="/calibration"><span className="material-icons">add</span></a>
+                                <a href="/detection"><span className="material-icons">add</span></a>
                             </div>
                             <div className="col-sm-12 mx-auto navigation col-lg-2 px-4 py-3 d-flex align-items-center justify-content-between">
                                 <span className="material-icons-outlined">

@@ -3,7 +3,7 @@ import * as faceapi from 'face-api.js';
 import * as feedbackFile from '../res/feedback.json';
 
 
-class DetectionDemoV2 extends React.Component {
+class Detection extends React.Component {
 
     state = {
         modelLoaded: false,
@@ -94,7 +94,7 @@ class DetectionDemoV2 extends React.Component {
                                     settings
                                 </span>
                                 <h4 className="heading my-auto text-capitalize">Conversation In Progress</h4>
-                                <span className="material-icons">close</span>
+                                <a href="/summary"><span className="material-icons">close</span></a>
                             </div>
                             <div className="emotion-indicator justify-content-center row w-100 mt-5 mx-auto">
                                 {this.state.emotion !== '' ? <h4 className="emotion text-capitalize">{this.state.emotion}</h4> : ''}
@@ -118,4 +118,4 @@ class DetectionDemoV2 extends React.Component {
     }
 
 }
-export default DetectionDemoV2;
+export default Detection;
